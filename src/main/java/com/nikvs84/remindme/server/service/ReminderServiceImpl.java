@@ -14,8 +14,8 @@ public class ReminderServiceImpl implements ReminderService {
     RemindRepository remindRepository;
 
     @Override
-    public Remind getById(long id) {
-        return remindRepository.getOne(id);
+    public Remind findById(long id) {
+        return remindRepository.findById(id);
     }
 
     @Override

@@ -1,7 +1,6 @@
 package com.nikvs84.remindme.server.controller;
 
 import com.nikvs84.remindme.server.entity.Remind;
-import com.nikvs84.remindme.server.repository.RemindRepository;
 import com.nikvs84.remindme.server.service.ReminderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +20,7 @@ public class ReminderController {
 
     @RequestMapping(value = "/reminders/{id}", method = RequestMethod.GET)
     public Remind getRemindById(@PathVariable long id) {
-        return service.getById(id);
+        return service.findById(id);
     }
 
     @RequestMapping(value = "/reminders", method = RequestMethod.POST)
